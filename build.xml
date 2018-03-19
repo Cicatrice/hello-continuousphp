@@ -10,7 +10,7 @@
   <target name="apt-package">
    <echo message="Install packages"/>
    <exec dir="${project.basedir}"
-         command="sudo wget https://github.com/rkt/rkt/releases/download/v1.29.0/rkt_1.29.0-1_amd64.deb ; sudo dpkg -i rkt_1.29.0-1_amd64.deb"
+	   command="sudo wget --quiet https://github.com/rkt/rkt/releases/download/v1.29.0/rkt_1.29.0-1_amd64.deb ; sudo apt-get install ./rkt_1.29.0-1_amd64.deb"
          checkreturn="true"
          passthru="true"/>
 </target>
