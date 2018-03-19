@@ -10,7 +10,7 @@
   <target name="apt-package">
    <echo message="Install packages"/>
    <exec dir="${project.basedir}"
-         command="sudo apt-get update ; sudo apt-get -y install docker.io; sudo service docker start"
+         command="sudo apt-get update ; sudo apt-get -y install cgroup-lite docker.io; sudo service cgroup-lite start ; sudo service docker start"
          checkreturn="true"
          passthru="true"/>
 </target>
