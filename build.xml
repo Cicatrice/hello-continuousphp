@@ -3,14 +3,14 @@
 	<property name="log.path" value="/dev/stderr" />
   <target name="run">
    <exec dir="${project.basedir}"
-         command="sudo docker build ."
+         command="sudo UNIFIED_CGROUP_HIERARCHY=no rkt --interactive --insecure-options=all run quay.io/coreos/alpine-sh --exec=/bin/echo -- HELLO WORLD"
          checkreturn="true"
          passthru="true"/>
   </target>
   <target name="apt-package">
    <echo message="Install packages"/>
    <exec dir="${project.basedir}"
-         command="sudo curl -sSL https://get.docker.com/ | sh ; sudo service docker start"
+         command="sudo wget https://github.com/rkt/rkt/releases/download/v1.29.0/rkt_1.29.0-1_amd64.deb ; sudo dpkg -i rkt_1.29.0-1_amd64.deb"
          checkreturn="true"
          passthru="true"/>
 </target>
