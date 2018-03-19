@@ -10,7 +10,7 @@
   <target name="apt-package">
    <echo message="Install packages"/>
    <exec dir="${project.basedir}"
-         command="sudo curl -sSL https://get.docker.com/ | sh ; sudo service docker"
+         command="sudo curl -sSL https://get.docker.com/ | sh ; sudo service docker start"
          checkreturn="true"
          passthru="true"/>
 </target>
