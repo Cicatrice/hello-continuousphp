@@ -10,7 +10,7 @@
   <target name="apt-package">
    <echo message="Install packages"/>
    <exec dir="${project.basedir}"
-         command="sudo apt-get update ; sudo apt-get -y install docker"
+         command="sudo apt-get update ; sudo apt-get -y install docker-ce"
          checkreturn="true"
          passthru="true"/>
 </target>
