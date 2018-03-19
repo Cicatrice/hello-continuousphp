@@ -1,0 +1,17 @@
+<project name="package" default="help" basedir=".">
+	<property file="build.properties" />
+	<property name="log.path" value="/dev/stderr" />
+  <target name="run">
+   <exec dir="${project.basedir}"
+         command="sudo docker build ."
+         checkreturn="true"
+         passthru="true"/>
+  </target>
+  <target name="apt-package">
+   <echo message="Install packages"/>
+   <exec dir="${project.basedir}"
+         command="sudo apt-get update ; sudo apt-get -y install docker"
+         checkreturn="true"
+         passthru="true"/>
+</target>
+</project>
