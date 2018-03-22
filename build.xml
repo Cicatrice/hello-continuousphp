@@ -3,14 +3,14 @@
 	<property name="log.path" value="/dev/stderr" />
   <target name="run">
    <exec dir="${project.basedir}"
-         command="sudo docker build ."
+         command="docker build ."
          checkreturn="true"
          passthru="true"/>
   </target>
   <target name="apt-package">
    <echo message="Install packages"/>
    <exec dir="${project.basedir}"
-         command="sudo curl -sSL https://get.docker.com/ | sh ; sudo service docker start"
+         command="sudo curl -sSL https://get.docker.com/ | sh ; sudo usermod -aG docker cphp ;  sudo service docker start"
          checkreturn="true"
          passthru="true"/>
 </target>
