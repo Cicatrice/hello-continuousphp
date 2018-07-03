@@ -3,15 +3,8 @@
 	<property name="log.path" value="/dev/stderr" />
   <target name="run">
    <exec dir="${project.basedir}"
-         command="docker build ."
+	 command="./scripts/kickstart.sh"
          checkreturn="true"
          passthru="true"/>
   </target>
-  <target name="apt-package">
-   <echo message="Install packages"/>
-   <exec dir="${project.basedir}"
-         command="sudo curl -sSL https://get.docker.com/ | sh ; sudo usermod -aG docker cphp ;  sudo service docker start"
-         checkreturn="true"
-         passthru="true"/>
-</target>
 </project>
