@@ -24,7 +24,7 @@ export PATH=/home/cphp/.rbenv/shims:${PATH}
 _log start rbenv install
 rbenv install 2.4.0
 _log start rbenv global  
-rbenv global 2.4.0
+sudo rbenv global 2.4.0
 
 
 _log start rbenv rehash
