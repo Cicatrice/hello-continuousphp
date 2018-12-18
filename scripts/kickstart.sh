@@ -13,6 +13,8 @@ _log(){
 _log start kickstart script
 
 
+rm -f /usr/local/bin/nodejs /usr/local/bin/node
+
 ls -l $(which node)
 ls -l $(which nodejs)
 
