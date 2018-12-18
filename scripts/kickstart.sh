@@ -12,11 +12,11 @@ _log(){
 
 _log start kickstart script
 
+. /usr/local/src/nvm/nvm.sh
+sudo rm -f /usr/local/bin/nodejs /usr/local/bin/node
 
-#sudo rm -f /usr/local/bin/nodejs /usr/local/bin/node
-
-#ls -l $(which node)
-#ls -l $(which nodejs)
+ls -l $(which node)
+ls -l $(which nodejs)
 
 sudo nvm use 8.14
 
