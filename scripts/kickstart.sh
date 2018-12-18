@@ -17,8 +17,7 @@ sudo rm -f /usr/local/bin/nodejs /usr/local/bin/node
 
 ls -l $(which node)
 ls -l $(which nodejs)
-
-nvm install 8.14
+sudo bash -c '. /usr/local/src/nvm/nvm.sh;nvm install 8.14'
 nvm use 8.14
 
 node --version
